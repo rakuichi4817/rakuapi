@@ -1,0 +1,25 @@
+site_name: rakuapi
+site_description: FastAPI×MKDocsのサンプル
+site_author: Rakuichi
+
+docs_dir: docs
+theme:
+  name: material
+  palette:
+    primary: blue grey
+  features:
+    - navigation.tabs
+    - toc.integrate
+
+plugins:
+  - search
+  - render_swagger
+  - awesome-pages
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

@@ -1,29 +1,29 @@
 {
-    "name": "fastapi-app",
-    "build": {
-        "context": "..",
-        "dockerfile": "../Dockerfile",
-        "target": "development"
-    },
-    "workspaceFolder": "/workspace",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "njpwerner.autodocstring",
-                "mhutchie.git-graph",
-                "MS-CEINTL.vscode-language-pack-ja",
-                "ms-python.python",
-                "ms-python.vscode-pylance",
-                "ionutvmi.path-autocomplete",
-                "DavidAnson.vscode-markdownlint",
-                "ms-toolsai.jupyter",
-                "redhat.vscode-yaml",
-                "bierner.markdown-preview-github-styles",
-                "yzhang.markdown-all-in-one",
-                "amazonwebservices.aws-toolkit-vscode"
-            ]
-        }
-    },
-    "postCreateCommand": "pipenv install --dev"
+	"name": "rakuapi-dev",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile",
+		"target": "devcontainer"
+	},
+	"workspaceFolder": "/rakuapi",
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/rakuapi,type=bind",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"MS-CEINTL.vscode-language-pack-ja",
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-python.flake8",
+				"ms-python.isort",
+				"njpwerner.autodocstring",
+				"ionutvmi.path-autocomplete",
+				"mhutchie.git-graph",
+				"DavidAnson.vscode-markdownlint",
+				"bierner.markdown-preview-github-styles",
+				"yzhang.markdown-all-in-one",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+	"postCreateCommand": "pipenv install --dev"
 }
